@@ -1,1 +1,42 @@
-Lab Prompts
+
+*********************************************************************************************************************
+CPSC 121
+Lab 1
+Fall 2018
+Eric May
+Warmup
+//Eric May (your name)
+//CPSC 121 Lab 1
+//8/22/2017
+#include <iostream>
+using namespace std;//So you don’t need to use "std::"
+
+int main()
+{
+	std::cout << "Hello, world!\n";
+	return 0;
+}
+
+Note the header above
+Making Change
+Create a program that:
+Asks the user to input a number of cents
+Calculates and displays the number of quarters, dimes, nickels, and pennies that should be used to reach the value. EX: 67 cents would be 2 quarters, 1 dime, 1 nickel, and 2 pennies
+Calculates and display the total number of coins to be given back, ie 6 coins for above
+
+Hint: The simplest way to solve this involves using the division (/) operator and modulus (%) operator. It helps to use the int data type!
+
+When you’ve completed your assignment, you’re free to ask me to give things a quick looking over. After you’re sure you’re done, submit the .cpp file to Titanium. ***IMPORTANT*** Please name your file <last name><first initial>lab1.cpp , mine, for example, would be MayElab1.cpp . For a partnered submission with John Doe, my submission would be MayE_DoeJlab1.cpp You may lose points or even get NO credit if your submission doesn’t follow these guidelines. After you’ve done both of things, then you may leave the lab.
+
+Points:
+2 - Documentation, readability, format
+1 - Accepts user input
+1 - Calculating number of coins
+2 - Output testing
+4 - Filename and Header
+*********************************************************************************************************************
+
+
+
+
+
