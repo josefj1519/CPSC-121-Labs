@@ -1,2 +1,2 @@
 # CSUF121PRACTICE
-121 Labs. Fall 2018
+121 Labs. Fall 2018, C++
