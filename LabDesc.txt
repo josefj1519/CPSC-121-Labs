@@ -1,4 +1,6 @@
 
+CTRL + F Lab "Number"
+
 *********************************************************************************************************************
 CPSC 121
 Lab 1
@@ -34,9 +36,328 @@ Points:
 1 - Calculating number of coins
 2 - Output testing
 4 - Filename and Header
+
 *********************************************************************************************************************
 
+CPSC 121
+Lab 2
+Fall 2018
+Eric May
+
+Category
+% of Final Grade
+Quizzes
+10%
+Labwork
+35%
+Midterm
+15%
+Final
+30%
+Participation
+10%
 
 
+Write a program that:
+Asks the user for their average grade (as a % out of 100) for each of the above grade categories
+If there is no data for a category, the user should enter the value -1
+In such cases, the total score used to calculate our average changes
+After all categories have had information input, calculate the user’s class grade based on the syllabus values above. Display a percentage and letter grade to the user.
+
+Points:
+2 - Documentation, readability, format
+3 - Proper use of conditional statements
+2 - Filename and Header
+3 - Output testing
+
+Header
+//Author: Eric May (your name)
+//CPSC 121 Lab 2
+//<MM/DD/YY> (Current Date)
+
+Filename
+<Last Name><First Initial>lab2.cpp
+For example, my assignment would be named MayElab2.cpp
+
+*********************************************************************************************************************
+
+CPSC 121
+Lab 3
+Fall 2018
+Eric May
+Printing Shapes
+Create a program that:
+Prompt the user to choose between a rectangle and a triangle
+Prompt user for shape parameters
+Rectangle
+Ask user to choose between supplying a word or a width
+Ask user for height
+Triangle
+Ask user to choose between supplying a word or a width
+Ask whether the triangle points up or down
+Print the desired shape
+Ask the user whether they want to print to a file, “myshape.txt”, or to cout
+This can be accomplished using fewer lines of code by using the base ostream type as an argument, which ofstream and cout are both derived from. See here
+Ask the user if they would like to exit, or return to step 1
+
+You must use at least two functions in this lab. How involved you get with them (including arguments, creating helper functions) is left up to you.
+
+Points:
+2 - Documentation, readability, format
+2 - Proper program flow (conditionals, loops, etc)
+1 - File output
+1 - Functions
+2 - Filename and Header
+2 - Output testing
+
+Header
+//<Your Name>
+//CPSC 121 Lab 3
+//<MM/DD/YY>
+
+Filename
+<Last Name><First Initial>lab3.cpp
+For example, my assignment would be named MayElab3.cpp
+
+
+
+//void DrawRectangle(int width, int height);
+//DrawRectangle(5,3)
+*****
+*****
+*****
+
+//void DrawRectangle(string word, int height);
+//DrawRectangle("VOTE", 3)
+shape.txt:
+VOTE
+VOTE
+VOTE
+
+//void DrawTriangle(int size, bool pointingUp);
+//DrawTriangle(4, true)
+*
+**
+***
+****
+
+//void DrawTriangle(string word, bool pointingUp);
+//DrawTriangle("VOTE", false)
+VOTE
+OTE
+TE
+E
+
+//DrawTriangle("VOTE", true)
+E
+TE
+OTE
+VOTE
+
+*********************************************************************************************************************
+
+ CPSC 121
+Lab 4
+Fall 2018
+Eric May
+
+Functions
+Create a program that:
+Declare a string and assign it an arbitrary starting value of your choosing
+Display the current contents of your string, then displays the following menu. If a function returns a string, it should replace the contents of your string, otherwise display the resulting information and leave the string unchanged. Function headers are provided; they should be used as-is in the manner appropriate.
+string getInput()
+MUST use getline (with cin)
+Due to differences in treatment of the \n character when we hit enter, cin.ignore may have to be used to fix the input buffer
+Reads user input from cin and stores it in the string being used. Contents will set initial state for the string next loop through program.
+string printBetween(int a, int b, int step = 1)
+Will return a string containing all numbers between a and b, including a and b, counting up
+E.G. a = 6, b = 3, output = “3456” (don’t use spaces)
+If only two values are provided in the function call, assumes step of 1
+Order is unassumed, but data is displayed counting up
+string nonalnum_removed(string input)
+Returns the string provided as input with all characters that are neither digits nor alphabetic removed
+Will probably involve function isalnum (slides/internet for references)
+If a string, str, has its length changed, any saved results from str.length() calls will be STALE, meaning they no longer reflect our data
+string alphabet_numberified(string input)
+Returns the string provided as input, except with (only) alphabetic characters converted to their character codes within the string
+“11a11” would become “119711”
+int sumDigits(string digitString)
+Attempts to read each character as a digit, and returns the sum
+Inclusion of non-digit characters should result in a notification (via cout) of the character that could not be summed up
+void saveString(string savedStr)
+Prints the current string’s contents to a file named <your lab filename>.txt
+You can overwrite the previous contents
+Asks the user if they would like to return to step 2, or exit.
+
+Points:
+1 - Documentation, readability, format
+3 - Proper use of functions
+2 - Proper program flow (conditionals, loops, etc)
+2 - Filename, Header, and Submission Process
+1 - Files
+1 - Output testing
+
+
+
+
+Header
+//Author: Eric May (your name)
+//CPSC 121 Lab 4
+//<MM/DD/YY> (Current Date)
+
+Filename
+<Last Name><First Initial>lab4.cpp, e.x. my assignment would be named MayElab4.cpp
+
+*********************************************************************************************************************
+
+CPSC 121
+Lab 5
+Fall 2018
+Eric May
+
+Using Arrays
+
+Create a program that:
+Prompts the user to input values for an array of five integers
+HINT: It helps your programming flow a LOT if you call the same function used in part 2.g
+Displays a menu, where the user may choose
+Sum - Calculates and displays the sum of numbers in the array
+Use this definition (with reference variable as parameter):
+void Sum(int array[], int & result)//stores sum in result
+Mean - Calculates and displays the average of numbers in the array. Should not round.
+Should not be an integer!
+Should use the “Sum” function defined above
+Display - Displays the current values held in the array
+Alternatively, you can just display it at the start of the menu’s prompt
+Sequencing - Displays the difference between each adjacent set of values
+Ie if we had {3, 5, 2, 9, 0}, we would get the output     2 -3 7 -9
+This just needs to be printed, not saved
+Search - Indicate whether the user’s chosen value is contained in the array, or not (boolean result should be returned, ie bool function).
+Sort - Arrange the values within the array so that they are in ascending order.
+Bubble or Selection sort will be relevant
+Extra Credit for BOGO sort (google/wiki)
+Edit - The user is re-prompted for input into the array (all elements)
+Exit - terminate the program
+3.  Loop back to step 2
+There should be at least 4 functions used in this program, including the function definition provided to you. The argument should be the array itself in most of these functions.
+
+You should probably use a global const int for array size. Do not use global variables unless they’re constants!
+
+Points:
+1 - Documentation, readability, format
+2 - Proper use of functions
+3 - Proper program flow (conditionals, loops, etc)
+2 - Filename and Header
+2 - Output testing
+
+Header
+//Author: Eric May (your name)
+//CPSC 121 Lab 5
+//<MM/DD/YY> (Current Date)
+
+Filename
+<Last Name><First Initial>lab5.cpp
+For example, my assignment would be named MayElab5.cpp
+
+*********************************************************************************************************************
+
+CPSC 121
+Lab 6
+Fall 2018
+Eric May
+
+//Provided with comments in github
+struct Calculator {
+	long long LHValue;
+	long long * RHValue;
+	char lastOperator;
+};
+
+Pointers and Structs
+	We will be creating a calculator program that uses a struct definition provided to you. Your program will:
+Declare a Calculator object, and initialize it
+0 for both values and + for last operator will be good
+You’ll have to initialize the pointer (with “new”) before initializing its value!
+Accepts a line of input that will be read like a calculator
+Valid operations - The user is prompted, then, without choosing, just provides one of the below patterns
+Full expressions:   3+5, when entered, displays/stores 8 (Used below)
+Partial expressions:	+1, when entered, uses the previous results as a starting point. Continuing from the above example, displays/stores 9
+Repeat last operation:		=, when entered, uses the previous operation’s results with the same operator and Right Hand value. If entered after the above statement, would display/store 10.
+You can make this run when no input is provided, just document it and let me know as the user!
+Quit:		q, when entered, ends the execution of the program
+Apart from any whitespace that may be in the input string, any characters that are neither digits, an operator (+-*/%), or the quit command, should not be accepted; meaning the calculator command is rejected with a message given to the user. If the user’s input is rejected, no action should be taken.
+Based on the user’s valid input, appropriately calculate, display, and store the answer in the LHValue member of your Calculator object
+void processInput(Calculator * calc, string userInput)
+Function definition above must be used (argument types can’t be changed)
+Repeat step 2
+
+Note: Don’t allow for division by 0!
+
+If you’re unfamiliar with pointers, wait, look to the slides and/or try working on this assignment with the pointer temporarily converted to an ordinary variable.
+
+
+
+Points:
+1 - Documentation, readability, format
+1.5 - Proper use of Pointers
+1.5 - Proper use of Structs
+2 - Proper program flow (conditionals, loops, etc)
+2 - Filename and Header
+2 - Output testing
+
+Header
+//Author: Eric May (your name)
+//CPSC 121 Lab 6
+//<MM/DD/YY> (Current Date)
+
+Filename
+<Last Name><First Initial>lab6.cpp
+For example, my assignment would be named MayElab6.cpp
+
+*********************************************************************************************************************
+
+CPSC 121
+Lab 7
+Fall 2018
+Eric May
+
+Using Classes
+The following program is going to revolve around creating and using the “Gladiator” class, which is included in your github repository. You must use that class definition in your project. In addition to writing a main function that uses the class correctly, you will also be responsible for defining 4 member functions of the gladiator class.
+
+Write a program that performs the following:
+Tell the user that they are going to be hosting a fight! But first, we need to…
+Declare your gladiator objects. This will call the constructor, which is where you will assign stats and assign, or ask for, a name.
+Max Health should be 150, 200, or 250
+Evasion and Crit  should be two separate random values chosen from 5, 10, or 15%
+Minimum Damage should be in the range 8-14, with Damage Range in the range 16-22
+Display the names and stats of both fighters to the user, and inform them that the fight will begin
+Your gladiators will alternatingly attack each other using the appropriate member functions (think about who is attacking, and who is taking *how much* damage)
+Each attack should display info about damage and/or remaining health
+This will continue until a gladiator loses all their health
+Inform the user who was victorious. Ask if the user wants to run another fight (return to step 2) or not (end program)
+
+---Maximum Damage = Minimum Damage + Damage Range
+---Min 30, range 50 would result in damage between 30-80
+---To roll for a 10% chance, due to the % (per “cent” ie century) we will be taking rand() % 100 and comparing it to the chance, 10. If the random number generated is lower than the chance, an 8 for example, that’s considered a success.
+---End of Chapter 8 slides contain more help with random numbers. Use srand properly (ie once)
+
+Points:
+1.5 - Documentation, readability, format
+1.5 - Filename and Header
+2 - Output testing
+2 - Proper program flow (conditions, loops, functions, etc)
+3 - Proper use of classes
+Header
+//Author: Eric May (your name)
+//CPSC 121 Lab 7
+//<MM/DD/YY> (Current Date)
+
+Filename
+<Last Name><First Initial>lab7.cpp
+For example, my assignment would be named MayElab7.cpp
+
+Note: I only want one file for this lab’s submission
+
+*********************************************************************************************************************
 
 
