@@ -360,4 +360,55 @@ Note: I only want one file for this lab’s submission
 
 *********************************************************************************************************************
 
+CPSC 121
+Lab 8
+Fall 2018
+Eric May
+Using the standard library, classes
+Using the gladiator class from before, we are going to create two armies that will attack each other. This will be accomplished by using the <vector> library
+
+Write a program that performs the following:
+Create two vectors of Gladiators (see last section of Chapter 7), one for the Red team, and one for the Blue team
+Show the number of fighters alive on each team
+Present the user with the following menu
+Take Turn
+Randomly select between red team and blue team
+Use the first/next fighter on that team to attack a random enemy in the enemy team
+Any fighters that get get killed should be removed from the team (With a notification)!
+Describe what happened each attack, including which team the attacker is part of.
+Repeat this process until all fighters have had a chance to attack.
+Add Fighters
+Add one fighter to both teams
+It would be easier to give fighters a name randomly selected from a list (array) of potential names, than to ask the user for two names every time they want to add more fighters
+Show the stats of both fighters as/after they have been added
+Exit Program
+Return to step 2
+
+
+I will soon make a set of bug-free gladiator method definitions for you to use. We will be including it - and the class definition - as separate files in this project - we will go over how to compile it together in lab. 
+
+Menu input should accept either a single lowercase char or an integer, prompts should tell user what to enter.
+
+Points:
+1.5 - Documentation, readability, format
+1.5 - Filename and Header
+2 - Output testing
+2 - Proper program flow (conditions, loops, functions, etc)
+3 - Proper use of vectors
+
+Header
+//Author: Eric May (your name)
+//CPSC 121 Lab 8
+//<MM/DD/YY> (Current Date)
+
+Filename
+<Last Name><First Initial>lab8.cpp
+For example, my assignment would be named MayElab8.cpp
+
+Note: I only want one file for this lab’s submission
+  
+*********************************************************************************************************************
+
+*********************************************************************************************************************
+
 
