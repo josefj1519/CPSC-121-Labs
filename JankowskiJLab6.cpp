@@ -91,7 +91,7 @@ if(oper != 'o'){
   //for +5, 5+, *2, etc.
   else if(gh[0]== ' '|| gh[strlen(gh)-1]==' '){
       *(calc->RHValue) = strtoll(gh, &ugh, 10);
-      cout<<"test";
+
   }
 
   //for new values
@@ -110,7 +110,7 @@ if(oper != 'o'){
 
         break;
         case'-':  calc->lastOperator = '-';
-          calc->LHValue += *(calc->RHValue);
+          calc->LHValue -= *(calc->RHValue);
         break;
 
         case'/':  calc->lastOperator = '/';
@@ -129,7 +129,13 @@ if(oper != 'o'){
         break;
 
         case'%': calc->lastOperator = '%';
-        calc->LHValue %= *(calc->RHValue);
+        if(*(calc->RHValue)==0){
+          cout<< "u dingus u cant divide by zero\n";
+          break;
+        }
+        else{
+          calc->LHValue %= *(calc->RHValue);
+        }
         break;
 
         //EQUALS
@@ -141,7 +147,7 @@ if(oper != 'o'){
 
             break;
             case'-':  calc->lastOperator = '-';
-              calc->LHValue += *(calc->RHValue);
+              calc->LHValue -= *(calc->RHValue);
 
             break;
             case'/':  calc->lastOperator = '/';
@@ -159,7 +165,13 @@ if(oper != 'o'){
 
             break;
             case'%': calc->lastOperator = '%';
-            calc->LHValue %= *(calc->RHValue);
+            if(*(calc->RHValue)==0){
+              cout<< "u dingus u cant divide by zero\n";
+              break;
+            }
+            else{
+              calc->LHValue %= *(calc->RHValue);
+            }
             break;
           }
         break;
