@@ -1,5 +1,6 @@
-# CSUF121PRACTICE
+# CPSC 121 Labs
 121 Labs. Fall 2018, C++
+by Josef Jankowski
 
 **Lab 1:** C++ Practice
 
